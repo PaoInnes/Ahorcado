@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html>
+	<head>
+	
+		<title></title>
+		<link rel="stylesheet" href=""/>
+		<meta charset="UTF-8" />
+		
+	</head>
+	<body>
+	
+		<h1>Registro</h1>
+		
+		<form action="ProcesaRegistro.php" method="post" >
+			
+			Nombre de usuario (iniciar con mayúscula) <br />
+			<input type="text" name="nombre" value="Nombre" required pattern="^[A-Z][a-z]+"/>
+			<br /><br />
+			Contraseña (mínimo 10 caracteres de los cuales por lo menos debes incluir letras mayúsculas, minúsculas, números y caracteres especiales) <br/>
+			<input type="password" name="contraseña" required pattern="(?=^.{10,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" />
+			<br /><br />
+			Ingresa otra vez tu contraseña<br/>
+			<input type="text" name="contraseña2" required pattern="(?=^.{10,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" />
+			<br /><br />
+			Elige una imagen <br/>
+			<input type="number" name="imagen" value="1" max="6" min="1" required="^[1-6]$" />
+			<br /><br />
+			<input type="submit" value="REGISTRARSE" />
+			
+		</form>
+		<img src="vahkcasc">//imagen con todos los usuarios 
+		
+	</body>
+<html>
