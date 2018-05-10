@@ -7,7 +7,9 @@
 		$arch=fopen($nom_arch,'r');//ESE NO EXISTE AÚN,PERO LO PROBÉ CON EL DE ARRIBA
 		while(!feof($arch))//sacar todos los registros que haya en un arreglo y después acomodarlo
 		{
-			$todos[$i]=fgets($arch);
+			$aux=fgets($arch);
+			$tam=strlen($aux);
+			$todos[$i]=substr($aux,0,$tam-2);
 			$i++;
 		}
 		fclose($arch);
@@ -18,34 +20,45 @@
 		$exist=false;
 		$sigue=true;
 		$usuarios=vaciar('..\archivos\usuarios.txt');
+		$nombre=$_SESSION['nombre'];
 		$max=count($usuarios);//la longitud de toooodos los registros, de ahí suma de 3 en 3 para sacar uno por uno
 		for($i=0;$i<$max;$i+=3)
-			$usu_ord[$usuarios[$i]]=['contraseña'=>$usuarios[$i+1],'imagen'=>$usuarios[$i+2]];
+			$usu_ord[$usuarios[$i]]=[$usuarios[$i+1],$usuarios[$i+2]];
 		foreach($usu_ord as $i=>$elem)//revisar nombre recibido con todos los nombres que hay
-		{
-			echo $i.'</br>';
-			echo $_SESSION['nombre'].'</br>';
-			if($i==$_SESSION['nombre'])
+			if($i==$nombre)
 			{
-				echo 'hola'.$i;
+				echo 'existe'.'</br>';
+				$exist=true;
 			}
-		}
-		/*if ($exist==false)
+		echo $_SESSION['contraseña'].'</br>';
+		echo $usu_ord[$_SESSION['nombre']][0].'</br>';
+		if ($exist==false)
 		{
 				$arch=fopen('..\archivos\usuarios.txt','a+');
 					fputs($arch,$_SESSION['nombre']);
 					fputs($arch,$_SESSION['contraseña']);
 					fputs($arch,$_SESSION['imagen']);
 				fclose($arch);
+				echo 'lo escribo'.'</br>';
 		}
 		if ($exist==true)
 		{
-			if ($_SESSION['contraseña']!=$usu_ord[$_SESSION['nombre']]['contraseña']) 
-				$sigue==false;
+			if ($_SESSION['contraseña']!=$usu_ord[$_SESSION['nombre']][0]) 
+			{
+				$sigue=false;
+				echo 'contraseña mal'.'</br>';
+			}
 		}
-		return $sigue;*/
 		return $sigue;
 	}
+	function revisa()
+	{
+		if(isset($_COOKIE['nombre']))
+			$exist = true;
+		else
+			$exist = false;
+		return $exist;
+	} 
 	function coincon($palabra, $palabra2, $mensaje, $arch)
 	{
 		if($palabra != $palabra2)
