@@ -44,10 +44,9 @@ echo '<html>';
 		if($exist==false)
 		{
 				$arch=fopen('..\archivos\usuarios.txt','a+');
-					$salto=chr(13);
-					fwrite($arch,$nombre.$salto);
-					fwrite($arch,$contraseña.$salto);
-					fwrite($arch,$imagen.$salto);
+					fputs($arch,$nombre);
+					fputs($arch,$contraseña);
+					fputs($arch,$imagen);
 				fclose($arch);
 		}
 		setcookie('nombre',$nombre,time()+24*3000*15,'/');

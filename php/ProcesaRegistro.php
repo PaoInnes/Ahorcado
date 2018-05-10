@@ -1,19 +1,14 @@
 <?php
 //ProcesRegistro.php
-	@include 'Funciones.php';
-	session_start();//inicia sesión, es necesario quitarlo cuando juntemos todo. 
-	$arch='registro.html';//Ruta página registro 
+	include 'Funciones.php';  
 	$a=0;
-	
 	forEach($_POST as $ind => $ele)
 		$_SESSION[$ind]=$ele;
 	$regex=array(
 	'nombre' => '/^[A-Z][a-z]+/',
 	'contraseña' =>'/(?=^.{10,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/',
-	'contraseña2' =>'/(?=^.{10,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/',
 	'imagen'=> '/^[1-6]$/'
 	);
-	
 	//VALIDACIÓN 1, todos los elementos cumplen con la regex  
 	forEach($_SESSION as $ind => $ele)
 	{
@@ -23,14 +18,18 @@
 		else 
 			$a++;
 	}
-	if ($a<4) 
+	if ($a<3) 
 		echo '<a href="'.$arch.'" clas="fondo">Regresar </a>';	
 	else 
-	//VALIDACIÓN 2, contraseña1 y contraseña2 son las mismas 
-		coincon($_SESSION['contraseña'], $_SESSION['contraseña2'], 'validado :)', $arch);
-	
-	//continuar con el código 
-	
+	{
+		setcookie('nombre',$_SESSION['nombre'],time()+24*3000*15,'/');
+	//Los datos que ingresó están bien y ahora los buscar en el archivo
+		$sigue=checar_arch();
+		if ($sigue==true)
+			echo 'holaaaa';
+		else
+			echo 'La contraseña no coincide <a href="..\html\registro.html" clas="fondo"> Regresar </a>';
+	}
 	session_unset();//Solo mientras todos los archivos están separados
-	session_destroy();//No queremos dañar a nuestro buen amigo el servidor 
+	session_destroy();//No queremos dañar a nuestro buen amigo el servidor
 ?>
