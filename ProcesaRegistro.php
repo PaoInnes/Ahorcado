@@ -1,7 +1,9 @@
 <?php
 //ProcesRegistro.php
-	session_start();
+	session_start();//inicia sesión, es necesario quitarlo cuando juntemos todo. 
 	$arch='registro.html';//Ruta página registro 
+	$a=0;
+	
 	forEach($_POST as $ind => $ele)
 		$_SESSION[$ind]=$ele;
 	$regex=array(
@@ -10,6 +12,7 @@
 	'contraseña2' =>'/(?=^.{10,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/',
 	'imagen'=> '/^[1-6]$/'
 	);
+	
 	//VALIDACIÓN 1, todos los elementos cumplen con la regex  
 	forEach($_SESSION as $ind => $ele)
 	{
@@ -23,14 +26,10 @@
 		echo '<a href="'.$arch.'" clas="fondo">Regresar </a>';	
 	else 
 	//VALIDACIÓN 2, contraseña1 y contraseña2 son las mismas 
-		if($_SESSION['contraseña']!=$_SESSION['contraseña2'])
-			echo 'La contraseña no coincide<a href="'.$arch.'" clas="fondo">Regresar </a>';
-		else
-			echo'yey. datos validados!';//continuar con el código 
-		
-		
-		
-	//print_r($_SESSION);
+		coincon($_SESSION['contraseña'], $_SESSION['contraseña2'], 'validado :)', $arch);
+	
+	//continuar con el código 
+	
 	session_unset();//Solo mientras todos los archivos están separados
 	session_destroy();//No queremos dañar a nuestro buen amigo el servidor 
 ?>
