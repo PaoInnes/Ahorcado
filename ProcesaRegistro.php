@@ -1,5 +1,6 @@
 <?php
 //ProcesRegistro.php
+	@include '';
 	session_start();//inicia sesión, es necesario quitarlo cuando juntemos todo. 
 	$arch='registro.html';//Ruta página registro 
 	$a=0;
@@ -23,7 +24,7 @@
 			$a++;
 	}
 	if ($a<4) 
-		echo '<a href="'.$arch.'" clas="fondo">Regresar </a>';	
+		echo '<a href="'.$arch.'" class="fondo">Regresar </a>';	
 	else 
 	//VALIDACIÓN 2, contraseña1 y contraseña2 son las mismas 
 		coincon($_SESSION['contraseña'], $_SESSION['contraseña2'], 'validado :)', $arch);

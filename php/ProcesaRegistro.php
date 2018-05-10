@@ -1,5 +1,6 @@
 <?php
 //ProcesRegistro.php
+	@include 'Funciones.php';
 	session_start();//inicia sesión, es necesario quitarlo cuando juntemos todo. 
 	$arch='registro.html';//Ruta página registro 
 	$a=0;
