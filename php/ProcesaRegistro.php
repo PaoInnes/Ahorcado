@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //ProcesRegistro.php
 	include 'Funciones.php';
 	$a=0;
@@ -9,7 +9,8 @@
 	'contraseña' =>'/(?=^.{10,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/',
 	'imagen'=> '/^[1-6]$/'
 	);
-	//VALIDACIÓN 1, todos los elementos cumplen con la regex
+	//print_r($_SESSION);
+	//VALIDACIÓN 1, todos los elementos cumplen con la regex  
 	forEach($_SESSION as $ind => $ele)
 	{
 		$n=preg_match($regex[$ind], $ele);
@@ -28,16 +29,11 @@
 		if ($sigue==true)
 			{
 				echo '<img src="..\archivos\img'.$_SESSION['imagen'].'.jpg" />';
-				echo '<h1>Hola '.$_COOKIE['nombre'].'!!<br />Bienvenid@</h1>';
+				echo '<h1>Hola '.$_SESSION['nombre'].'!!<br />Bienvenid@</h1>';
 			}
 		else
 			echo 'La contraseña no coincide, intentelo de nuevo <a href="..\html\registro.html" clas="fondo"> Regresar </a>';
 	}
-
-
-
-
-
 	session_unset();//Solo mientras todos los archivos están separados
 	session_destroy();//No queremos dañar a nuestro buen amigo el servidor
 ?>

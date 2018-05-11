@@ -1,11 +1,11 @@
 <?php
 	session_start();
-
+	//FUNCIONES DEL INICIO DE SESION
 	function vaciar ($nom_arch)//sacar todos los registros que haya en un archivo y pasarlo a un array, devuelde el array
 	{
 		$todos=[];
 		$i=0;
-		$arch=fopen($nom_arch,'r');//ESE NO EXISTE AÚN,PERO LO PROBÉ CON EL DE ARRIBA
+		$arch=fopen('..\\archivos\\'.$nom_arch,'r');//ESE NO EXISTE AÚN,PERO LO PROBÉ CON EL DE ARRIBA
 		while(!feof($arch))//sacar todos los registros que haya en un arreglo y después acomodarlo
 		{
 			$aux=fgets($arch);
@@ -33,17 +33,14 @@
 				$exist=true;
 			}
 		//echo $_SESSION['contraseña'].'</br>';MONITOREAR, YA NO ES NECESARIO MOSTRARLO, CONTRASEÑA FORMULARIO
-		$nombre=$_SESSION['nombre'];//MARCABA UN 'WARNING' PORQUE COVERTIA STRING TO ARRAY, ALGO UN POCO LOCO
 		//echo $usu_ord[$nombre][0].'</br>';MONITOREAR, CONTRASEÑA DEL ARCHIVO
 		if ($exist==false)//GUARDA UN NUEVO USUARIO EN CASO DE QUE NO COINCIDA NINGUN REGISTRO
 		{
-				$arch=fopen('..\archivos\usuarios.txt','a+');
-
-				fputs($arch,$_SESSION['nombre'].'\n');
-				fputs($arch,$_SESSION['contraseña'].'\n');
-				fputs($arch,$_SESSION['imagen'].'\n');
-
-				fclose($arch);
+			$arch=fopen('..\archivos\usuarios.txt','a+');
+				fputs($arch,"\r\n".$_SESSION['nombre']);
+				fputs($arch,"\r\n".$_SESSION['contraseña']);
+				fputs($arch,"\r\n".'img'.$_SESSION['imagen']);
+			fclose($arch);
 		}
 		if ($exist==true)
 		{
@@ -55,7 +52,6 @@
 		}
 		return $sigue;
 	}
-
 	function revisa()
 	{
 		if(isset($_COOKIE['nombre']))
@@ -63,6 +59,18 @@
 		else
 			$exist = false;
 		return $exist;
+	}
+	//FUNCIONES DEL JUEGO
+	function pista ($length, $pal)
+	{
+		$length=$length-1;
+		do
+		{
+			$rand=rand(0,$length); 
+			$n=preg_match('/[AEIUOaeiou_]/', $pal[$rand]);//AMO ESTO! <3
+		}
+		while ($n!=0);
+		return $pal[$rand];
 	}
 
 ?>
