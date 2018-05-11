@@ -20,6 +20,7 @@
 		$exist=false;
 		$sigue=true;
 		$usuarios=vaciar('..\archivos\usuarios.txt');
+		$nombre=$_SESSION['nombre'];
 		$max=count($usuarios);//la longitud de toooodos los registros, de ahí suma de 3 en 3 para sacar uno por uno
 		for($i=0;$i<$max;$i+=3)
 			$usu_ord[$usuarios[$i]]=[$usuarios[$i+1],$usuarios[$i+2]];
@@ -29,14 +30,14 @@
 				echo 'existe'.'</br>';
 				$exist=true;
 			}
-		echo $_SESSION['contraseña'].'</br>';
-		echo $usu_ord[$_SESSION['nombre']][0].'</br>';
+		//echo $_SESSION['contraseña'].'</br>';
+		//echo $usu_ord[$_SESSION['nombre']][0].'</br>';
 		if ($exist==false)
 		{
 				$arch=fopen('..\archivos\usuarios.txt','a+');
-					fputs($arch,$_SESSION['nombre'].'\n');
-					fputs($arch,$_SESSION['contraseña'].'\n');
-					fputs($arch,$_SESSION['imagen'].'\n');
+					fputs($arch,"\r\n".$_SESSION['nombre']);
+					fputs($arch,"\r\n".$_SESSION['contraseña']);
+					fputs($arch,"\r\n".$_SESSION['imagen']);
 				fclose($arch);
 				echo 'lo escribo'.'</br>';
 		}
