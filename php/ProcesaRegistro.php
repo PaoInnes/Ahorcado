@@ -28,10 +28,10 @@
 		if ($sigue==true)
 			{
 				echo '<img src="..\archivos\img'.$_SESSION['imagen'].'.jpg" />';
-				echo '<h1>Hola '.$_COOKIE['nombre'].'!!<br />Bienvenida</h1>';
+				echo '<h1>Hola '.$_COOKIE['nombre'].'!!<br />Bienvenid@</h1>';
 			}
 		else
-			echo 'La contraseña no coincide <a href="..\html\registro.html" clas="fondo"> Regresar </a>';
+			echo 'La contraseña no coincide, intentelo de nuevo <a href="..\html\registro.html" clas="fondo"> Regresar </a>';
 	}
 
 
