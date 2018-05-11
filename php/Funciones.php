@@ -30,14 +30,15 @@
 				echo 'existe'.'</br>';
 				$exist=true;
 			}
-		//echo $_SESSION['contraseña'].'</br>';
-		//echo $usu_ord[$_SESSION['nombre']][0].'</br>';
+		print_r($usu_ord);
+		echo $_SESSION['contraseña'].'</br>';
+		echo $usu_ord[$_SESSION['nombre']][0].'</br>';
 		if ($exist==false)
 		{
 				$arch=fopen('..\archivos\usuarios.txt','a+');
 					fputs($arch,"\r\n".$_SESSION['nombre']);
 					fputs($arch,"\r\n".$_SESSION['contraseña']);
-					fputs($arch,"\r\n".$_SESSION['imagen']);
+					fputs($arch,"\r\n".'img'.$_SESSION['imagen']);
 				fclose($arch);
 				echo 'lo escribo'.'</br>';
 		}

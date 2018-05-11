@@ -9,6 +9,7 @@
 	'contraseña' =>'/(?=^.{10,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/',
 	'imagen'=> '/^[1-6]$/'
 	);
+	print_r($_SESSION);
 	//VALIDACIÓN 1, todos los elementos cumplen con la regex  
 	forEach($_SESSION as $ind => $ele)
 	{
