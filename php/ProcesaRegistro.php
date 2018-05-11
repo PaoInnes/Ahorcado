@@ -30,6 +30,7 @@
 		{
 				echo '<img src="..\archivos\img'.$_SESSION['imagen'].'.jpg" />';
 				echo '<h1>Hola '.$_SESSION['nombre'].'!!<br />Bienvenid@</h1>';
+				hola();
 				echo '<br /><a href="juego.php" clas="fondo"> Empezar a jugar </a>';
 		}
 		else
