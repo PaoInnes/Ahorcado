@@ -20,7 +20,6 @@
 		$exist=false;
 		$sigue=true;
 		$usuarios=vaciar('..\archivos\usuarios.txt');
-		$nombre=$_SESSION['nombre'];
 		$max=count($usuarios);//la longitud de toooodos los registros, de ahí suma de 3 en 3 para sacar uno por uno
 		for($i=0;$i<$max;$i+=3)
 			$usu_ord[$usuarios[$i]]=[$usuarios[$i+1],$usuarios[$i+2]];
@@ -35,9 +34,9 @@
 		if ($exist==false)
 		{
 				$arch=fopen('..\archivos\usuarios.txt','a+');
-					fputs($arch,$_SESSION['nombre']);
-					fputs($arch,$_SESSION['contraseña']);
-					fputs($arch,$_SESSION['imagen']);
+					fputs($arch,$_SESSION['nombre'].'\n');
+					fputs($arch,$_SESSION['contraseña'].'\n');
+					fputs($arch,$_SESSION['imagen'].'\n');
 				fclose($arch);
 				echo 'lo escribo'.'</br>';
 		}
@@ -59,13 +58,4 @@
 			$exist = false;
 		return $exist;
 	} 
-	function coincon($palabra, $palabra2, $mensaje, $arch)
-	{
-		if($palabra != $palabra2)
-			echo 'La contraseña no coincide <a href="'.$arch.'" clas="fondo"> Regresar </a>';
-		else
-			checar_arch();
-	}/*PARA COMPARAR CONTRASEÑAS, SI NO COINCIDE TE REGRESA A LA PÁGINA REGISTRO DE LO CONTRARIO TE MANDA UN MENSAJE.
-	ES NECESARIO INDICAR LA RUTA DEL ARCHIVO REGISTRO */
-	
 ?>
