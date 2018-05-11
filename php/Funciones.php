@@ -4,7 +4,7 @@
 	{
 		$todos=[];
 		$i=0;
-		$arch=fopen($nom_arch,'r');//ESE NO EXISTE AÚN,PERO LO PROBÉ CON EL DE ARRIBA
+		$arch=fopen('..\\archivos\\'.$nom_arch,'r');//ESE NO EXISTE AÚN,PERO LO PROBÉ CON EL DE ARRIBA
 		while(!feof($arch))//sacar todos los registros que haya en un arreglo y después acomodarlo
 		{
 			$aux=fgets($arch);
@@ -19,7 +19,7 @@
 	{
 		$exist=false;
 		$sigue=true;
-		$usuarios=vaciar('..\archivos\usuarios.txt');
+		$usuarios=vaciar('usuarios.txt');
 		$nombre=$_SESSION['nombre'];
 		$max=count($usuarios);//la longitud de toooodos los registros, de ahí suma de 3 en 3 para sacar uno por uno
 		for($i=0;$i<$max;$i+=3)
