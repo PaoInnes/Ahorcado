@@ -39,7 +39,7 @@
 			$arch=fopen('..\archivos\usuarios.txt','a+');
 				fputs($arch,"\r\n".$_SESSION['nombre']);
 				fputs($arch,"\r\n".$_SESSION['contraseña']);
-				fputs($arch,"\r\n".'img'.$_SESSION['imagen']);
+				fputs($arch,"\r\n".$_SESSION['imagen']);
 			fclose($arch);
 		}
 		if ($exist==true)

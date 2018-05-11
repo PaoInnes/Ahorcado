@@ -27,12 +27,13 @@
 	//Los datos que ingresó están bien y ahora los buscar en el archivo
 		$sigue=checar_arch();
 		if ($sigue==true)
-			{
+		{
 				echo '<img src="..\archivos\img'.$_SESSION['imagen'].'.jpg" />';
 				echo '<h1>Hola '.$_SESSION['nombre'].'!!<br />Bienvenid@</h1>';
-			}
+				echo '<br /><a href="juego.php" clas="fondo"> Empezar a jugar </a>';
+		}
 		else
-			echo 'La contraseña no coincide, intentelo de nuevo <a href="..\html\registro.html" clas="fondo"> Regresar </a>';
+			echo ' <a href="..\html\registro.html" clas="fondo"> Regresar </a>';
 	}
 	session_unset();//Solo mientras todos los archivos están separados
 	session_destroy();//No queremos dañar a nuestro buen amigo el servidor
