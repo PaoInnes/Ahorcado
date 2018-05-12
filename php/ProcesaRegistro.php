@@ -10,7 +10,7 @@
 	'imagen'=> '/^[1-6]$/'
 	);
 	//print_r($_SESSION);
-	//VALIDACIÓN 1, todos los elementos cumplen con la regex  
+	//VALIDACIÓN 1, todos los elementos cumplen con la regex
 	forEach($_SESSION as $ind => $ele)
 	{
 		$n=preg_match($regex[$ind], $ele);
