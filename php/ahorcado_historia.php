@@ -27,7 +27,6 @@
 				echo '<a href="..\html\registro.html" clas="fondo">¡Acepto! </a>';
 			if($exist==true)
 			{
-				$_SESSION['p1']=true;
 				$_SESSION['nombre']=$_COOKIE['nombre'];
 				echo '<h1>Hola '.$_SESSION['nombre'].'!!<br />Bienvenid@</h1>';
 				hola();

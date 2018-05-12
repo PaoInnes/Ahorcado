@@ -36,6 +36,6 @@
 		else
 			echo ' <a href="..\html\registro.html" clas="fondo"> Regresar </a>';
 	}
-	session_unset();//Solo mientras todos los archivos están separados
-	session_destroy();//No queremos dañar a nuestro buen amigo el servidor
+	//session_unset();//Solo mientras todos los archivos están separados
+	//session_destroy();//No queremos dañar a nuestro buen amigo el servidor
 ?>
