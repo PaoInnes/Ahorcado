@@ -1,11 +1,11 @@
 <?php
 	@include 'Funciones.php';
 	//session_start();
-	echo $_SESSION['p1'];
+	//echo $_SESSION['p1'];
 	if ($_SESSION['p1']=='no')
 	{
-		echo '___________';
-		$letra = 'a';
+		//echo '___________';
+		$letra = $_GET['letra'];;
 		$n=preg_match('/^[A-Za-z]$/', $letra);
 		if ($n==1)
 		{
@@ -19,24 +19,25 @@
 					$monito=tachar($letra);
 				}
 			}
-			// else 
-				// echo 'perdiste muejajajajja';
+			else 
+				echo 'perdiste muejajajajja';
 			
 		}
 	}
 	
 	if ($_SESSION['p1']=='si')
 	{
-		echo '________';
 		primeraVez();
 		$letra=pista((strlen($_SESSION['goodpal'])),$_SESSION['goodpal']);//generar la primera pista
 		$monito=tachar($letra);
 	}
 	
-	$aciertos=substr_count($_SESSION['badpal'],'x');
-	if($monito<=10 && $aciertos<0 )
+	$aciertos=substr_count($_SESSION['badpal'],'X');
+	if($monito<=10 && $aciertos>=0 )
 	{
 		echo '<form action="juego.php" method="get">';
+			//echo $_SESSION['goodpal'].'<br />';
+			echo $_SESSION['badpal'].'<br />';
 			echo '<input type="text" name="letra" maxlength="2" required pattern="^[A-Za-z]$" />';
 			echo '<input type="submit" />';
 		echo '</form>';

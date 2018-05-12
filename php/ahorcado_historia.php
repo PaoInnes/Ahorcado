@@ -14,7 +14,6 @@
 	</head>
 	<body>
 		<?php
-			session_start();
 			include "Funciones.php";
 			$exist = revisa();
 			echo    '<h1>-AHORCADO-</h1>

@@ -77,7 +77,7 @@
 
 		¡Vamos valiente!</p>';
 		$_SESSION['p1']='si';//para indicar que es la primera vez que se jugará y así poder procesar en juego
-		echo $_SESSION['p1'];
+		//echo $_SESSION['p1'];
 	}
 	
 	//FUNCIONES DEL JUEGO
@@ -111,7 +111,7 @@
 		//echo $bad_pal.'<br/>'; //VAR FINAL PARA MOSTRAR EN PANTALLA
 		//echo $_SESSION['goodpal'].'<br/>';
 		$_SESSION['p1']='no';
-		echo $_SESSION['p1'];
+		//echo $_SESSION['p1'];
 		return;
 	}
 
@@ -125,7 +125,7 @@
 			for($k=0; $k<$count_reem; $k++)
 			{
 				$posi = strpos($_SESSION['goodpal'],$recibe); // POSICIÓN DE LA LETRA
-				$_SESSION['goodpal'][$posi] = 'x'; //LA TACHA EN LA ORIGINAL PARA NO VOLVERLA A CONTAR
+				$_SESSION['goodpal'][$posi] = 'XXX'; //LA TACHA EN LA ORIGINAL PARA NO VOLVERLA A CONTAR
 				$_SESSION['badpal'][$posi] = $recibe; //MODIFICA LO QUE MUESTRA EN PANTALLA (palabra mala, aciertos que lleva)
 			}
 		else
