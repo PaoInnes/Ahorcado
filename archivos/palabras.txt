@@ -1,48 +1,51 @@
-Pastel
-Flan
-Jericalla
-Pay
-Helado
-Budin
-Gelatina
-Fresas con crema (especial)
-Tarta
-Brownie
-Cremme Brule
-Brigadeiros
-Galletas
-Banana Split 
-Gelatina de mosaico 
-Cupcakes
-Paleta
-Dulces
-Panque 
-Pastel de queso
-Arroz con leche
-Dulce de banana
-Fresas con crema
-Platanos con crema
-Platanos con nutella 
-Crepas
-Nutella 
-Waffle
-Churros 
-Merengues
-Tapioca
-Panqueques
-Bombones
-Cheesecake
-Volcan de chocolate
-Bunuelos
-Mousse
-Tiramisu
-Dulce de leche
-Strudel
-Macarrones
-Muffin
-Donas
-Profiteroles
-Sundae
-Trufas
-Tartaleta
-Trenza
+﻿ARROZ CON LECHE
+ALFAJORES
+BANANA SPLIT 
+BIZCOCHO
+BOMBONES
+BRIGADEIROS
+BROWNIE
+BUDÍN
+BUÑUELOS
+CAMOTES
+CHEESECAKE
+CHURROS 
+CREMME BRULE
+CREPAS
+CUPCAKES
+DONAS
+DULCE DE BANANA
+DULCE DE LECHE
+DULCES
+FLAN
+FRESAS CON CREMA
+GALLETAS
+GELATINA
+HELADO
+JERICALLA
+MACARRONES
+MERENGUES
+MOUSSE
+MUFFIN
+NUTELLA 
+PALETA
+PANQUE 
+PANQUEQUES
+PASTEL
+PASTEL DE QUESO
+PAY
+PLÁTANOS CON CREMA
+PLÁTANOS CON NUTELLA 
+PROFITEROLES
+SANDWICH HELADO
+STRUDEL
+SUNDAE
+TAPIOCA
+TARTA
+TARTALETA
+TIRAMISÚ
+TORRIJA
+TRENZA
+TRUFAS
+VOLCÁN DE CHOCOLATE
+WAFFLE
