@@ -111,6 +111,7 @@
 		//echo $bad_pal.'<br/>'; //VAR FINAL PARA MOSTRAR EN PANTALLA
 		//echo $_SESSION['goodpal'].'<br/>';
 		$_SESSION['p1']='no';
+		$_SESSION['error']=0;
 		//echo $_SESSION['p1'];
 		return;
 	}
@@ -119,19 +120,20 @@
 	{
 	//RECIBE LETRAS, Y MODIFICA bad_pal
  //LETRA RECIBIDO
-		static $error = 0;
+		//static $error = 0;
 		$count_reem = substr_count($_SESSION['goodpal'],$recibe); //# DE COINCIDENCIAS EN PALABRA ORIG.
 		if ($count_reem !=0)
 			for($k=0; $k<$count_reem; $k++)
 			{
 				$posi = strpos($_SESSION['goodpal'],$recibe); // POSICIÓN DE LA LETRA
-				$_SESSION['goodpal'][$posi] = 'XXX'; //LA TACHA EN LA ORIGINAL PARA NO VOLVERLA A CONTAR
+				$_SESSION['goodpal'][$posi] = 'X'; //LA TACHA EN LA ORIGINAL PARA NO VOLVERLA A CONTAR
 				$_SESSION['badpal'][$posi] = $recibe; //MODIFICA LO QUE MUESTRA EN PANTALLA (palabra mala, aciertos que lleva)
 			}
 		else
-			$error++;
-			//echo $_SESSION['badpal']; //MUESTRA EN PANTALLA
-		return $error;
+			$_SESSION['error']++;
+		//echo $_SESSION['goodpal'];
+		//echo $_SESSION['badpal']; //MUESTRA EN PANTALLA
+		return;
 	}
 
 ?>
