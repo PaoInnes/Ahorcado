@@ -60,15 +60,17 @@
 	}
 	function hola ()
 	{
-		echo '<h2>REGLAS DEL JUEGO</h2>
+		echo '<div id="explica">
+		<h2>REGLAS DEL JUEGO</h2>
 		<p>Hola '.$_SESSION['nombre'].', ahora que sabes la gran amenaza de esta situación, necesitamos explicarte como puedes salvar a tu amigo, así que presta mucha atención.</p>
 		<p>El Rey comelón te dará la palabra a adivinar, pero sólo podrás ver esto ---> "X".<br/>
 		Cada "X" significa una letra, y si hay espacios " ", entonces es el nombre de un postre con más de una palabra.<br/><br/>
-		El Rey te proporcionará una pista al inicio de la adivinanza, y conforme avances en el proceso...y al Rey comience a darle hambre, te proporcionara pistas para terminar más rápido con esto.</p>
-		<p>Se te mostrarán cuadros como estos: (ADJUNTAR IMAGEN DE CUADROS), los cuales representan el postre misterioso<br/>
-		Y tu tendrás un espacio como este: (ADJUNTAR IMAGEN DE LETRA), que representa la opción de letra que puedes darle al Rey, esperando que esta esté dentro de la palabra oculta.<br/><br/>
+		El Rey te proporcionará una pista al inicio de la adivinanza, y conforme avances en el proceso...y al Rey comience a darle hambre, te proporcionará pistas para terminar más rápido con esto.</p>
+		<p>Se te mostrarán "X", las cuales representan el postre misterioso<br/>
+		Y tu tendrás un espacio en blanco, en donde ingresarás la letra que puedes darle al Rey, esperando que esta esté dentro de la palabra oculta.<br/><br/>
 		Tendrás 10 oportunidades para probar tus letras, en caso de fracasar, el Rey degollará a tu amigo.<br/><br/>
-		¡Vamos valiente!</p>';
+		¡Vamos valiente!</p>
+		</div>';
 		$_SESSION['p1']='si';//para indicar que es la primera vez que se jugará y así poder procesar en juego
 		//echo $_SESSION['p1'];
 	}
