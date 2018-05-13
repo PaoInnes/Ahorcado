@@ -62,7 +62,8 @@
 	}
 	function hola ()
 	{
-		echo '<h2>REGLAS DEL JUEGO</h2>
+		echo '<div id="explica">
+		<h2>REGLAS DEL JUEGO</h2>
 		<p>Hola '.$_SESSION['nombre'].', ahora que sabes la gran amenaza de esta situación, necesitamos explicarte como puedes salvar a tu amigo, así que presta mucha atención.</p>
 
 		<p>El Rey comelón te dará la palabra a adivinar, pero sólo podrás ver esto ---> "X".<br/>
@@ -75,7 +76,8 @@
 
 		Tendrás 10 oportunidades para probar tus letras, en caso de fracasar, el Rey degollará a tu amigo.<br/><br/>
 
-		¡Vamos valiente!</p>';
+		¡Vamos valiente!</p>
+		</div>';
 		$_SESSION['p1']='si';//para indicar que es la primera vez que se jugará y así poder procesar en juego
 		//echo $_SESSION['p1'];
 	}
