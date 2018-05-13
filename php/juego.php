@@ -21,7 +21,6 @@
 			}
 			else 
 				$_SESSION['error']++;
-			
 		}
 	}
 	if ($_SESSION['p1']=='si')
@@ -37,13 +36,27 @@
 		echo '<form action="juego.php" method="get">';
 			//echo $_SESSION['goodpal'].'<br />';
 			echo $_SESSION['badpal'].'<br />';
-			echo '<input type="text" name="letra" maxlength="2" required pattern="^[A-Za-z]$" />';
+			//echo '<input type="text" name="letra" maxlength="2" required pattern="^[A-Za-z]$" />';
+			echo '<input type="text" name="letra" maxlength="1" required pattern="^[A-Za-z]$" />';
 			echo '<input type="submit" />';
 		echo '</form>';
 	}
 	else
 	{
-		session_unset();//Solo mientras todos los archivos están separados
-		session_destroy();//No queremos dañar a nuestro buen amigo el servidor
-	}	
+		if ($_SESSION['error']>10)
+			{
+			echo '<p>Vaya... Estuviste muy cerca de salvarlo.</p>';
+			echo '<p>Yo soy intimo amigo del rey, si gustas puedo pedirle que te de otra oportunidad.</p>';
+			}
+		else
+			{
+			echo '<p>¡WOW! Eres muy bueno en esto. ¿No te gustaría salvar a más gente del reino? Con esa habilidad que tienes será pan comido.</p>';
+			}
+		echo '<p>¿Qué dices '.$_SESSION['nombre'].', aceptas? No olvides que está en juego la vida de alguien.</p>';
+		echo '<form action="respuesta.php" method="post">';
+			echo '¡Claro que si! <input type="radio" name="respuesta" value="1" /><br /><br />';
+			echo 'Será para la otra <input type="radio" name="respuesta" value="2" /><br /><br />';
+			echo '<input type="submit"  />';
+		echo '</form>';
+	}
 ?>

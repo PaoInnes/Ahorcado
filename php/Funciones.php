@@ -16,8 +16,6 @@
 		fclose($arch);
 		return $todos;
 	}
-
-
 	function checar_arch ()
 	{
 		$exist=false;
@@ -64,22 +62,17 @@
 	{
 		echo '<h2>REGLAS DEL JUEGO</h2>
 		<p>Hola '.$_SESSION['nombre'].', ahora que sabes la gran amenaza de esta situación, necesitamos explicarte como puedes salvar a tu amigo, así que presta mucha atención.</p>
-
 		<p>El Rey comelón te dará la palabra a adivinar, pero sólo podrás ver esto ---> "X".<br/>
 		Cada "X" significa una letra, y si hay espacios " ", entonces es el nombre de un postre con más de una palabra.<br/><br/>
-
 		El Rey te proporcionará una pista al inicio de la adivinanza, y conforme avances en el proceso...y al Rey comience a darle hambre, te proporcionara pistas para terminar más rápido con esto.</p>
-
 		<p>Se te mostrarán cuadros como estos: (ADJUNTAR IMAGEN DE CUADROS), los cuales representan el postre misterioso<br/>
 		Y tu tendrás un espacio como este: (ADJUNTAR IMAGEN DE LETRA), que representa la opción de letra que puedes darle al Rey, esperando que esta esté dentro de la palabra oculta.<br/><br/>
-
 		Tendrás 10 oportunidades para probar tus letras, en caso de fracasar, el Rey degollará a tu amigo.<br/><br/>
-
 		¡Vamos valiente!</p>';
 		$_SESSION['p1']='si';//para indicar que es la primera vez que se jugará y así poder procesar en juego
 		//echo $_SESSION['p1'];
 	}
-	
+
 	//FUNCIONES DEL JUEGO
 	function pista ($length, $pal)
 	{
@@ -87,21 +80,17 @@
 		do
 		{
 			$rand=rand(0,$length);
-			$n=preg_match('/[AEIUOaeiou_]/', $pal[$rand]);//AMO ESTO! <3
+			$n=preg_match('/[XAEIUOaeiou_]/', $pal[$rand]);//AMO ESTO! <3
 		}
 		while ($n!=0);
 		return $pal[$rand];
 	}
-
 	function primeraVez ()
 	{
 		$postres= array();
 		$postres = vaciar('palabras.txt');
-
 		$_SESSION['goodpal']=$postres[rand(0,49)];
-
 		$length = strlen($_SESSION['goodpal']);
-
 		for($i=0; $i<$length; $i++)//$le2=
 			if ($_SESSION['goodpal'][$i]==' ')
 				$bad_pal[$i] = ' '; //CREA ARRAY QUE SE MUESTRA EN PANTALLA
@@ -115,7 +104,6 @@
 		//echo $_SESSION['p1'];
 		return;
 	}
-
 	function tachar($recibe)
 	{
 	//RECIBE LETRAS, Y MODIFICA bad_pal
@@ -135,5 +123,4 @@
 		//echo $_SESSION['badpal']; //MUESTRA EN PANTALLA
 		return;
 	}
-
 ?>
