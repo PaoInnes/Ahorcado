@@ -1,0 +1,73 @@
+.historia{
+	text-align: center;
+	background-image: url('imagenes/castillo.png');
+	background-attachment: fixed;
+	background-size: cover;
+	color: #000000;
+	font-family: 'Courgette', cursive;
+	font-size: 28px;
+}
+#principal{
+	font-family: 'Cinzel Decorative', cursive;
+	font-size: 70px;
+
+}
+#trans{
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:#fff;
+	filter: alpha(opacity=50);
+	opacity: .5;
+}
+strong{
+	color: red;
+	font-family: 'Cinzel', serif;
+	font-size: 40px;
+}
+.regis{
+	font-family: 'Bubblegum Sans', cursive;
+	font-size: 25px;
+	color: #6f0718;
+	background-image: url('imagenes/bienvenida.jpeg');
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 0.7em;
+}
+#registro{
+	font-family: 'Fauna One', serif;
+	font-size: 40px;
+	background-color: #ffe14a;
+	width: 940px;
+}
+img{
+	border: 6px ridge #9c0b0b;
+    margin: 1.1em;
+    box-shadow: 8px 8px 17px 1px #130606;
+}
+#hola{
+	color: #ffffff;
+	font-family: 'Merienda One', cursive;
+}
+#explica{
+	color: #423f3f;
+    font-family: 'Lemon', cursive;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding: 30px;
+    background-color: #f1dada7a;
+    font-size: 20px;
+}
+.reglas{
+	text-align: center;
+	background-image: url('imagenes/reglas.jpeg');
+	background-attachment: fixed;
+	background-size: cover;
+}
+.fondo{
+	font-family: 'Vast Shadow', cursive;
+    font-size: 30px;
+    color: #FF9800;
+    border: 2px dotted #FF9800;
+}
