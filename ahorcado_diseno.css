@@ -42,10 +42,32 @@ strong{
 	width: 940px;
 }
 img{
-	border: 2px solid #ffeb3b;
-	margin: 1.3em;
-	box-shadow: 8px 8px 17px 1px #e2a701;
+	border: 6px ridge #9c0b0b;
+    margin: 1.1em;
+    box-shadow: 8px 8px 17px 1px #130606;
 }
-h2{
-	
+#hola{
+	color: #ffffff;
+	font-family: 'Merienda One', cursive;
+}
+#explica{
+	color: #423f3f;
+    font-family: 'Lemon', cursive;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding: 30px;
+    background-color: #f1dada7a;
+    font-size: 20px;
+}
+.reglas{
+	text-align: center;
+	background-image: url('imagenes/reglas.jpeg');
+	background-attachment: fixed;
+	background-size: cover;
+}
+.fondo{
+	font-family: 'Vast Shadow', cursive;
+    font-size: 30px;
+    color: #FF9800;
+    border: 2px dotted #FF9800;
 }
