@@ -37,7 +37,7 @@
 		echo '<form action="juego.php" method="get">';
 			//echo $_SESSION['goodpal'].'<br />';
 			echo $_SESSION['badpal'].'<br />';
-			echo '<input type="text" name="letra" maxlength="2" required pattern="^[A-Za-z]$" />';
+			echo '<input type="text" name="letra" maxlength="1" required pattern="^[A-Za-z]$" />';
 			echo '<input type="submit" />';
 		echo '</form>';
 	}
