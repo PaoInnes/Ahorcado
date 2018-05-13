@@ -1,3 +1,13 @@
+<DOCTYPE html>
+<html>
+	<head>
+
+		<title></title>
+		<link rel="stylesheet" href=""/>
+		<meta charset="UTF-8" />
+
+	</head>
+	<body>
 <?php
 	@include 'Funciones.php';
 	//session_start();
@@ -60,3 +70,5 @@
 		echo '</form>';
 	}
 ?>
+	</body>
+</html>

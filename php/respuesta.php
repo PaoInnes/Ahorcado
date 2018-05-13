@@ -11,8 +11,8 @@
     }
   else
     {
-      echo '<p>'.$_SESSION['nombre'].' fue un placer haberte conocido, esperamos que regreses pronto al reino.</p>';
-      session_unset();//Solo mientras todos los archivos están separados
-  		session_destroy();//No queremos dañar a nuestro buen amigo el servidor
+		echo '<p>'.$_SESSION['nombre'].', fue un placer haberte conocido, esperamos que regreses pronto al reino.</p>';
+		session_unset();//Solo mientras todos los archivos están separados
+		session_destroy();//No queremos dañar a nuestro buen amigo el servidor
     }
 ?>
