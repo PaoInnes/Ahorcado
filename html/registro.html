@@ -1,35 +1,35 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
-
-		<title></title>
+		<title>Registrate</title>
 		<link rel="stylesheet" href=""/>
 		<meta charset="UTF-8" />
-
+		<link rel="stylesheet" href="..\ahorcado_diseno.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Fauna+One" rel="stylesheet">
 	</head>
-	<body>
+	<body class="regis">
+			<h1 id="registro">Registro</h1>
 
-		<h1>Registro</h1>
+			<form action="..\php\ProcesaRegistro.php" method="post" ><!--Indicar ruta archivo PHP-->
 
-		<form action="..\php\ProcesaRegistro.php" method="post" ><!--Indicar ruta archivo PHP-->
+				Nombre de usuario (iniciar con mayúscula) <br />
+				<input type="text" name="nombre" required pattern="^[A-Z][a-z]+"/>
+				<br /><br />
+				Contraseña (mínimo 10 caracteres de los cuales por lo menos debes incluir letras mayúsculas, minúsculas, números y caracteres especiales) <br/>
+				<input type="password" name="contraseña" required pattern="(?=^.{10,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" />
+				<br /><br />
+				Elige una imagen <br/>
+				<input type="number" name="imagen" value="1" max="6" min="1" required="^[1-6]$" />
+				<br /><br />
+				<input type="submit" value="REGISTRARSE" />
 
-			Nombre de usuario (iniciar con mayúscula) <br />
-			<input type="text" name="nombre" value="Nombre" required pattern="^[A-Z][a-z]+"/>
-			<br /><br />
-			Contraseña (mínimo 10 caracteres de los cuales por lo menos debes incluir letras mayúsculas, minúsculas, números y caracteres especiales) <br/>
-			<input type="password" name="contraseña" required pattern="(?=^.{10,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" />
-			<br /><br />
-			Elige una imagen <br/>
-			<input type="number" name="imagen" value="1" max="6" min="1" required="^[1-6]$" />
-			<br /><br />
-			<input type="submit" value="REGISTRARSE" />
-
-		</form>
-		A cada imagen le corresponde un número. Comenzando con 1 de izquierda a derecha.</br>
-		<img src="..\archivos\img1.jpg" />
-		<img src="..\archivos\img2.jpg" />
-		<img src="..\archivos\img3.jpg" />
-		<img src="..\archivos\img4.jpg" />
-		<img src="..\archivos\img5.jpg" />
-		<img src="..\archivos\img6.jpg" />
+			</form>
+			A cada imagen le corresponde un número. Comenzando con 1 de izquierda a derecha.</br>
+			<img src="..\archivos\img1.jpg" />
+			<img src="..\archivos\img2.jpg" />
+			<img src="..\archivos\img3.jpg" />
+			<img src="..\archivos\img4.jpg" />
+			<img src="..\archivos\img5.jpg" />
+			<img src="..\archivos\img6.jpg" />
+	</body>
 <html>
