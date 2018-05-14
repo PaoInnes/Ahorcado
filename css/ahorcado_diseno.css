@@ -92,3 +92,33 @@ img{
 	background-color:rgba(255,255,255,0.55);
 	color: #481B07;
 }
+#juego{
+	background-image: url('imagenes/juego.png');
+	text-align: center;
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 3%;
+    margin: 1%;
+}
+#trans{
+	width:100%;
+	height:100%;
+	background-color:#ffdaf799;
+}
+.ayuda{
+	font-family: 'Righteous', cursive;
+	font-size: 3em;
+    color: #ce048e;
+}
+#palabra{
+	font-family: 'Vast Shadow', cursive;
+    font-size: 4em;
+	color: #036098;
+	text-decoration: underline;
+	text-decoration-style: dashed;
+}
+.preguntar{
+	font-family: 'Skranji', cursive;
+	font-size: 2em;
+    color: #6058d0;
+}

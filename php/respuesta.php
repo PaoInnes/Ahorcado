@@ -47,7 +47,9 @@
 			//print_r($scores);//checar
 			$mejores=array_reverse($scores);//ya que los tiene ordenados, como lo hizo de menor a mayor, y nosotros queremos lo contrario, lo volteamos
 			//print_r($mejores);//checar
-			echo '<h1> SCORES </h1><br /><br /><br /><br /><br /><br />';
+			echo '<div class="respuesta" style="font-size: 2em"><h1>¡ADIÓS!</h1>';
+			echo '<p>'.$_SESSION['nombre'].', fue un placer haberte conocido, esperamos que regreses pronto al reino.</p>';
+			echo '<h2> SCORES </h2><br />';
 			$i=0;
 			$arch=fopen('..\archivos\scores.txt','w');
 			forEach($mejores as $nom=>$puntos)//meter sólo los cinco mejores en el archivo, y mandar eso a pantalla
@@ -61,11 +63,10 @@
 				$i++;
 			}
 			fclose($arch);
-			echo '<br /><br /><br /><br /><div class="respuesta" style="font-size: 3em"><h2>¡ADIOS!</h2>';
-			echo '<p>'.$_SESSION['nombre'].', fue un placer haberte conocido, esperamos que regreses pronto al reino.</p></div>';
 			session_unset();//Solo mientras todos los archivos están separados
 			session_destroy();//No queremos dañar a nuestro buen amigo el servidor
-	  echo '</body>';
+	  echo '	</div>
+			</body>';
 
     }
     ?>

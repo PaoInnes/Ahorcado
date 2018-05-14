@@ -32,11 +32,12 @@
 			else
 			{
 				setcookie('nombre',$_SESSION['nombre'],time()+24*3000*15,'/');
+				setcookie('imagen',$_SESSION['imagen'],time()+24*3000*15,'/');
 			//Los datos que ingresó están bien y ahora los buscar en el archivo
 				$sigue=checar_arch();
 				if ($sigue==true)
 				{
-						echo '<img src="..\archivos\img'.$_SESSION['imagen'].'.jpg" />';
+						echo '<img src="..\archivos\img'.$_SESSION['imagen'].'.jpeg" />';
 						echo '<h1 id="hola">Hola '.$_SESSION['nombre'].'!!<br />Bienvenid@</h1>';
 						hola();
 						echo '<br /><a href="juego.php" class="fondo"> Empezar a jugar </a>';
