@@ -5,11 +5,11 @@
 	background-size: cover;
 	color: #000000;
 	font-family: 'Courgette', cursive;
-	font-size: 28px;
+	font-size: 2em;
 }
 #principal{
 	font-family: 'Cinzel Decorative', cursive;
-	font-size: 70px;
+	font-size: 3em;
 
 }
 #trans{
@@ -24,7 +24,7 @@
 strong{
 	color: red;
 	font-family: 'Cinzel', serif;
-	font-size: 40px;
+	font-size: 3em;
 }
 .regis{
 	font-family: 'Bubblegum Sans', cursive;
