@@ -56,9 +56,9 @@
 			{
 				if($i<5)
 				{
-					echo $nom.'                                              '.$puntos.'<br />';
-					fputs($arch,$nom."\r\n");
-					fputs($arch,$puntos."\r\n");
+					echo $nom.'     '.$puntos.'<br />';
+					fputs($arch,$nom.'\r\n');
+					fputs($arch,$puntos.'  \r\n');
 				}
 				$i++;
 			}

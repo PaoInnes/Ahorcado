@@ -96,7 +96,7 @@
 		$length = strlen($_SESSION['goodpal']);
 		for($i=0; $i<$length; $i++)//$le2=
 			if ($_SESSION['goodpal'][$i]==' ')
-				$bad_pal[$i] = ' '; //CREA ARRAY QUE SE MUESTRA EN PANTALLA
+				$bad_pal[$i] = ' '; //CREA ARRAY CON X DEL TAMAÑO DE LA PALABRA
 			else
 				$bad_pal[$i] = 'X';
 		$_SESSION['badpal']=implode('',$bad_pal); //LO PEGA TODO EN bad_pal

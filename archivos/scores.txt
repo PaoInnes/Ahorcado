@@ -1,10 +1,1 @@
-Osvaldo
-11
-Emy
-10
-Eli
-9
-David
-8
-Paola
-8
+Osvaldo\r\n11  \r\nEmy\r\n10  \r\nEli\r\n9  \r\nDavid\r\n8  \r\nPaola\r\n1  \r\n
