@@ -71,6 +71,7 @@
 		Tendrás 10 oportunidades para probar tus letras, en caso de fracasar, el Rey degollará a tu amigo.<br/><br/>
 		¡Vamos valiente!</p>
 		</div>';
+		$_SESSION['puntaje']=0;//Para los scores
 		$_SESSION['p1']='si';//para indicar que es la primera vez que se jugará y así poder procesar en juego
 		//echo $_SESSION['p1'];
 	}
