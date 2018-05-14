@@ -8,6 +8,7 @@
 	<body class="reglas">
 		<?php
 		//ProcesaRegistro.php
+			include 'Funciones.php';
 			$a=0;
 			forEach($_POST as $ind => $ele)
 				$_SESSION[$ind]=$ele;
@@ -30,7 +31,6 @@
 				echo '<a href="'.$arch.'" class="fondo">Regresar </a>';
 			else
 			{
-				include 'Funciones.php';
 				setcookie('nombre',$_SESSION['nombre'],time()+24*3000*15,'/');
 			//Los datos que ingresó están bien y ahora los buscar en el archivo
 				$sigue=checar_arch();

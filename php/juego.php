@@ -9,8 +9,8 @@
 	</head>
 	<body>
 <?php
+	session_start();
 	@include 'Funciones.php';
-	//session_start();
 	//echo $_SESSION['p1'];
 	if ($_SESSION['p1']=='no')
 	{
