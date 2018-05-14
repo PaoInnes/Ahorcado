@@ -25,7 +25,6 @@
     {
 	echo '<body id="meVoy">';
 			$scores=[];
-			$pers=[];
 			$exist=false;
 			$todos=vaciar('scores.txt');
 			$max=count($todos);//la longitud de toooodos los scores, de ahí suma de 2 en 2 para acomodarlos
@@ -42,7 +41,7 @@
 				
 			if($exist==false)//no existe, entonces lo tiene que agregar en el array
 				$scores[$nombre]=$puntaje;
-				
+			//print_r($scores);
 			array_multisort($scores);//ordenar los scores
 			//print_r($scores);//checar
 			$mejores=array_reverse($scores);//ya que los tiene ordenados, como lo hizo de menor a mayor, y nosotros queremos lo contrario, lo volteamos
@@ -57,8 +56,8 @@
 				if($i<5)
 				{
 					echo $nom.'     '.$puntos.'<br />';
-					fputs($arch,$nom.'\r\n');
-					fputs($arch,$puntos.'  \r\n');
+					fputs($arch,$nom."\r\n");
+					fputs($arch,$puntos."\r\n");
 				}
 				$i++;
 			}

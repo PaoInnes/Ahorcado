@@ -28,7 +28,7 @@
 					$a++;
 			}
 			if ($a<3)
-				echo '<a href="'.$arch.'" class="fondo">Regresar </a>';
+				echo '<a href="..\html\registro.html" class="fondo">Regresar </a>';
 			else
 			{
 				setcookie('nombre',$_SESSION['nombre'],time()+24*3000*15,'/');

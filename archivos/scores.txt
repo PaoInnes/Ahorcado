@@ -1,1 +1,10 @@
-Osvaldo\r\n11  \r\nEmy\r\n10  \r\nEli\r\n9  \r\nDavid\r\n8  \r\nPaola\r\n1  \r\n
+Eli
+12
+Uriel
+11
+David
+9
+Emy
+3
+Paola
+0
