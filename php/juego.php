@@ -60,6 +60,7 @@
 			}
 		else
 			{
+			$_SESSION['puntaje']++;
 			echo '<p>¡WOW! Eres muy bueno en esto. ¿No te gustaría salvar a más gente del reino? Con esa habilidad que tienes será pan comido.</p>';
 			}
 		echo '<p>¿Qué dices '.$_SESSION['nombre'].', aceptas? No olvides que está en juego la vida de alguien.</p>';
